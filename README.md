@@ -27,7 +27,7 @@ Develop a predictive model to forecast daily electricity consumption for non-res
 **Dataset:**  
 Subset of the **Building Data Genome Project 2**, containing hourly electricity readings for multiple North American buildings between **2016–2017**.
 
-📊 **Dataset Source:** [Building Data Genome Project 2 on Kaggle](https://www.kaggle.com/datasets/claytonmiller/buildingdatagenomeproject2)  
+**Dataset Source:** [Building Data Genome Project 2 on Kaggle](https://www.kaggle.com/datasets/claytonmiller/buildingdatagenomeproject2)  
 
 ## 3. Data Understanding and Preparation
 
@@ -56,7 +56,7 @@ Subset of the **Building Data Genome Project 2**, containing hourly electricity 
 
 #### Electricity Usage Trends
 
-The aggregated daily consumption across all buildings reveals clear temporal patterns and seasonality:
+**The aggregated daily consumption across all buildings reveals clear temporal patterns and seasonality:**
 
 ![Aggregated Daily Electricity Usage](reports/figures/aggregated_usage_trend.png)
 *Figure 1: Daily electricity consumption trends showing seasonal variations and weekly patterns*
@@ -69,7 +69,7 @@ The aggregated electricity usage trend graph reveals clear patterns in daily ele
 
 **Model Justification:** These patterns affirm that the Random Forest model, which excels at handling non-linear relationships and feature interactions, is appropriate for predicting electricity usage based on time-dependent and weather-related variables. The model's robustness is further enhanced by its capacity to generalize across such recurring trends.
 
-Individual building analysis shows diverse consumption profiles based on building type and size:
+**Individual building analysis shows diverse consumption profiles based on building type and size:**
 
 ![Sample Buildings Consumption](reports/figures/sample_buildings_trend.png)
 *Figure 2: Electricity usage patterns for sample buildings, demonstrating variability across different building types*
