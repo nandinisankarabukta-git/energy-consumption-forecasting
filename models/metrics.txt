@@ -1,0 +1,8 @@
+=== Model Performance Metrics ===
+Root Mean Squared Error: 386.6993
+R^2 Score: 0.9610
+Mean Absolute Error: 167.0214
+
+=== Cross-Validation Results ===
+Mean RMSE: 700.2596
+Standard Deviation of RMSE: 119.5610
