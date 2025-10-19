@@ -276,6 +276,10 @@ Common Issues and Solutions
 * ``metadata.csv``
 * ``weather.csv``
 
+**Download from:** https://www.kaggle.com/datasets/claytonmiller/buildingdatagenomeproject2
+
+Place the downloaded files in the ``data/raw/`` directory.
+
 
 Running with Make
 -----------------

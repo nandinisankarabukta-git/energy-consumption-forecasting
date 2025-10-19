@@ -25,7 +25,9 @@ Develop a predictive model to forecast daily electricity consumption for non-res
 **Key Inputs:** Time, temperature, humidity, wind speed, building metadata  
 
 **Dataset:**  
-Subset of the **Building Data Genome Project 2** (available on Kaggle), containing hourly electricity readings for multiple North American buildings between **2016–2017**.  
+Subset of the **Building Data Genome Project 2**, containing hourly electricity readings for multiple North American buildings between **2016–2017**.
+
+📊 **Dataset Source:** [Building Data Genome Project 2 on Kaggle](https://www.kaggle.com/datasets/claytonmiller/buildingdatagenomeproject2)  
 
 ## 3. Data Understanding and Preparation
 
@@ -117,4 +119,4 @@ The model identified building characteristics and time-series patterns as key pr
 
 For detailed installation instructions, setup guide, and step-by-step pipeline execution, please refer to:
 
-**📖 [Getting Started Guide](docs/getting-started.rst)**
+**[Getting Started Guide](docs/getting-started.rst)**
