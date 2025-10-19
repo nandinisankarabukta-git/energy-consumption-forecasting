@@ -61,10 +61,28 @@ The aggregated daily consumption across all buildings reveals clear temporal pat
 ![Aggregated Daily Electricity Usage](reports/figures/aggregated_usage_trend.png)
 *Figure 1: Daily electricity consumption trends showing seasonal variations and weekly patterns*
 
+The aggregated electricity usage trend graph reveals clear patterns in daily electricity consumption over time:
+
+- **Seasonal Variations:** Peaks during summer months (mid-2016) indicate increased electricity demand, likely due to higher cooling needs. This demonstrates the significant impact of weather conditions on energy consumption.
+
+- **Cyclic Trends:** Consistent fluctuations suggest weekly or monthly periodicity, possibly influenced by workweek schedules or weather changes. These recurring patterns are critical for accurate forecasting.
+
+**Model Justification:** These patterns affirm that the Random Forest model, which excels at handling non-linear relationships and feature interactions, is appropriate for predicting electricity usage based on time-dependent and weather-related variables. The model's robustness is further enhanced by its capacity to generalize across such recurring trends.
+
 Individual building analysis shows diverse consumption profiles based on building type and size:
 
 ![Sample Buildings Consumption](reports/figures/sample_buildings_trend.png)
 *Figure 2: Electricity usage patterns for sample buildings, demonstrating variability across different building types*
+
+The electricity usage trends for multiple buildings reveal distinct consumption patterns:
+
+- **Building-Specific Profiles:** Each building displays a unique usage trajectory, indicating varying operational characteristics or occupancy behaviors. For instance, the red and orange lines denote higher consumption, possibly linked to larger or more active facilities.
+
+- **Abrupt Changes:** Notable spikes in mid-2016 could reflect new operational phases or added equipment. These sudden shifts demonstrate the dynamic nature of building energy usage.
+
+- **Diverse Magnitudes:** The significant variation in usage magnitudes highlights the importance of building-specific models or features. Some buildings consume several times more energy than others, requiring the model to handle a wide range of values.
+
+**Feature Engineering Importance:** This diversity underscores the importance of feature engineering to capture these nuances, ensuring that the selected predictive model is robust across different consumption profiles. The inclusion of building size (sqm) as a feature directly addresses this variability.
 
 ## 4. Approach and Methodology
 
@@ -103,11 +121,18 @@ The model identified building characteristics and time-series patterns as key pr
 ![Feature Importance](reports/figures/feature_importance.png)
 *Figure 3: Feature importance rankings showing building size (sqm) as the dominant predictor (67%), followed by lag features capturing temporal dependencies*
 
-**Key Findings:**
-- **Building size (sqm)**: strongest predictor (~67% importance)
-- **Lag variables (Lag_1, Lag_7)**: captured temporal dependencies (~26% combined)
-- **Temperature & Wind speed**: influenced seasonal energy variations (~4%)
-- **Temporal variables (month, is_weekend)**: explained recurring usage cycles (~3%)
+**Key Features Driving Predictions:**
+
+**sqm (Square Meter Area):** Dominates the model's predictive capability, highlighting its critical influence on electricity usage. With ~67% importance, building size is the strongest determinant of consumption patterns.
+
+**Lag Variables (Lag_7 and Lag_1):** Reflect temporal dependencies, capturing patterns from past usage to predict future trends effectively. Together accounting for ~26% importance, these features enable the model to learn from historical consumption behavior.
+
+**Environmental Factors:**
+- **Air Temperature:** Impacts electricity usage, particularly in heating or cooling requirements (~2% importance)
+- **Dew Temperature & Sea-Level Pressure:** Contribute minimally but provide atmospheric context that influences energy demand
+
+**Seasonal and Temporal Influence:**
+Features like month, day_of_week, and is_weekend add value by modeling behavioral and seasonal trends in usage patterns. These temporal features capture recurring cycles in building operations and occupancy.
 
 ### Business Impact
 - **Forecast Accuracy:** 96% explanatory power in consumption trends  
